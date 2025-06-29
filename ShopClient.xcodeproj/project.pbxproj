@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3783C34C2E10225E004E156A /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783C34B2E10225E004E156A /* RegViewController.swift */; };
+		3783C34F2E102DDE004E156A /* RegistrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783C34E2E102DDE004E156A /* RegistrationService.swift */; };
+		3783C3532E103636004E156A /* ServerResponseReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3783C3522E103636004E156A /* ServerResponseReg.swift */; };
 		37D31D442DCE995D00333D67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D31D432DCE995D00333D67 /* AppDelegate.swift */; };
 		37D31D462DCE995D00333D67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D31D452DCE995D00333D67 /* SceneDelegate.swift */; };
-		37D31D482DCE995D00333D67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D31D472DCE995D00333D67 /* ViewController.swift */; };
+		37D31D482DCE995D00333D67 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D31D472DCE995D00333D67 /* WelcomeViewController.swift */; };
 		37D31D4B2DCE995D00333D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D31D492DCE995D00333D67 /* Main.storyboard */; };
 		37D31D4E2DCE995D00333D67 /* ShopClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37D31D4C2DCE995D00333D67 /* ShopClient.xcdatamodeld */; };
 		37D31D502DCE995E00333D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D31D4F2DCE995E00333D67 /* Assets.xcassets */; };
@@ -17,15 +20,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3783C34B2E10225E004E156A /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
+		3783C34E2E102DDE004E156A /* RegistrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationService.swift; sourceTree = "<group>"; };
+		3783C3522E103636004E156A /* ServerResponseReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponseReg.swift; sourceTree = "<group>"; };
 		37D31D402DCE995D00333D67 /* ShopClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D31D432DCE995D00333D67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D31D452DCE995D00333D67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37D31D472DCE995D00333D67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37D31D472DCE995D00333D67 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		37D31D4A2DCE995D00333D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37D31D4D2DCE995D00333D67 /* ShopClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShopClient.xcdatamodel; sourceTree = "<group>"; };
 		37D31D4F2DCE995E00333D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37D31D522DCE995E00333D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		37D31D542DCE995E00333D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D31D542DCE995E00333D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3701CFF02E0FF026008EB159 /* ShopClient */ = {
+			isa = PBXGroup;
+			children = (
+				3701CFF82E0FF15C008EB159 /* Model */,
+				3701CFF72E0FF155008EB159 /* View */,
+				3701CFF62E0FF14A008EB159 /* Controller */,
+				3783C34D2E102DC2004E156A /* Network */,
+			);
+			path = ShopClient;
+			sourceTree = "<group>";
+		};
+		3701CFF12E0FF033008EB159 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3701CFF52E0FF144008EB159 /* Model */,
+				3701CFF42E0FF13E008EB159 /* View */,
+				3701CFF32E0FF137008EB159 /* Controller */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3701CFF22E0FF03B008EB159 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				37D31D4F2DCE995E00333D67 /* Assets.xcassets */,
+				37D31D542DCE995E00333D67 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3701CFF32E0FF137008EB159 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37D31D432DCE995D00333D67 /* AppDelegate.swift */,
+				37D31D452DCE995D00333D67 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3701CFF42E0FF13E008EB159 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D31D512DCE995E00333D67 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3701CFF52E0FF144008EB159 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3701CFF62E0FF14A008EB159 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37D31D472DCE995D00333D67 /* WelcomeViewController.swift */,
+				3783C34B2E10225E004E156A /* RegViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3701CFF72E0FF155008EB159 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D31D492DCE995D00333D67 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3701CFF82E0FF15C008EB159 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37D31D4C2DCE995D00333D67 /* ShopClient.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3783C34D2E102DC2004E156A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3783C34E2E102DDE004E156A /* RegistrationService.swift */,
+				3783C3522E103636004E156A /* ServerResponseReg.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		37D31D372DCE995D00333D67 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +152,9 @@
 		37D31D422DCE995D00333D67 /* ShopClient */ = {
 			isa = PBXGroup;
 			children = (
-				37D31D432DCE995D00333D67 /* AppDelegate.swift */,
-				37D31D452DCE995D00333D67 /* SceneDelegate.swift */,
-				37D31D472DCE995D00333D67 /* ViewController.swift */,
-				37D31D492DCE995D00333D67 /* Main.storyboard */,
-				37D31D4F2DCE995E00333D67 /* Assets.xcassets */,
-				37D31D512DCE995E00333D67 /* LaunchScreen.storyboard */,
-				37D31D542DCE995E00333D67 /* Info.plist */,
-				37D31D4C2DCE995D00333D67 /* ShopClient.xcdatamodeld */,
+				3701CFF12E0FF033008EB159 /* App */,
+				3701CFF02E0FF026008EB159 /* ShopClient */,
+				3701CFF22E0FF03B008EB159 /* SupportingFiles */,
 			);
 			path = ShopClient;
 			sourceTree = "<group>";
@@ -142,8 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D31D4E2DCE995D00333D67 /* ShopClient.xcdatamodeld in Sources */,
-				37D31D482DCE995D00333D67 /* ViewController.swift in Sources */,
+				37D31D482DCE995D00333D67 /* WelcomeViewController.swift in Sources */,
+				3783C34C2E10225E004E156A /* RegViewController.swift in Sources */,
+				3783C3532E103636004E156A /* ServerResponseReg.swift in Sources */,
 				37D31D442DCE995D00333D67 /* AppDelegate.swift in Sources */,
+				3783C34F2E102DDE004E156A /* RegistrationService.swift in Sources */,
 				37D31D462DCE995D00333D67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,12 +385,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35F72NUF9N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShopClient/Info.plist;
+				INFOPLIST_FILE = ShopClient/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shop;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +400,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.volkovmd.ShopClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,12 +418,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35F72NUF9N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShopClient/Info.plist;
+				INFOPLIST_FILE = ShopClient/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shop;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +433,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.volkovmd.ShopClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
