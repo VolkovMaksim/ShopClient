@@ -25,7 +25,7 @@ final class RegistrationService {
         let param: [String: Any] = ["username": username,
                                     "email": email,
                                     "password": password
-        ]
+                                    ]
         
         // добавляем метод для регистрации
         let url = configureUrl(method: "/registration")
@@ -52,7 +52,7 @@ final class RegistrationService {
             
             do {
                 let result = try decoder.decode(ServerResponseReg.self, from: data)
-                resultMessage = result.user_message
+                resultMessage = result.userMessage
                 print(resultMessage)
             } catch {
                 print(error)
